@@ -31,24 +31,24 @@ public class UserAccountsFilter implements Filter {
         SessionRepository<Session> repo = (SessionRepository<Session>) httpRequest
                 .getAttribute(SessionRepository.class.getName());
 
-        String currentSessionAlias = sessionManager.getCurrentSessionAlias(httpRequest);
-        Map<String, String> sessionIds = sessionManager.getSessionIds(httpRequest);
+//        String currentSessionAlias = sessionManager.getCurrentSessionAlias(httpRequest);
+//        Map<String, String> sessionIds = sessionManager.getSessionIds(httpRequest);
 
         String contextPath = httpRequest.getContextPath();
-        System.out.println("currentSessionAlias: " + currentSessionAlias);
+//        System.out.println("currentSessionAlias: " + currentSessionAlias);
         System.out.println("contextPath: " + contextPath);
-        for (Map.Entry<String, String> entry : sessionIds.entrySet()) {
-            String alias = entry.getKey();
-            String sessionId = entry.getValue();
-
-            Session session = repo.findById(sessionId);
-            if (session == null) {
-                continue;
-            }
-
-            System.out.println("alias: " + alias);
-            System.out.println("sessionId: " + sessionId);
-        }
+//        for (Map.Entry<String, String> entry : sessionIds.entrySet()) {
+//            String alias = entry.getKey();
+//            String sessionId = entry.getValue();
+//
+//            Session session = repo.findById(sessionId);
+//            if (session == null) {
+//                continue;
+//            }
+//
+//            System.out.println("alias: " + alias);
+//            System.out.println("sessionId: " + sessionId);
+//        }
 
         filterChain.doFilter(servletRequest, servletResponse);
     }
