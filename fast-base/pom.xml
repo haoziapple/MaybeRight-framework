@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fast-framework</artifactId>
+        <groupId>github.haozi</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <description>
+        最底层依赖，提供诸如BaseController，ActionResult，ErrorCode，BasePojo等基础类，以及一些基础的工具类，例如StringUtils，DateUtils等。
+        使用纯Java编码，完全不引入任何的第三方库，保证依赖的纯净。对外交付Maven依赖
+    </description>
+
+    <groupId>github.haozi</groupId>
+    <artifactId>fast-base</artifactId>
+
+
+</project>

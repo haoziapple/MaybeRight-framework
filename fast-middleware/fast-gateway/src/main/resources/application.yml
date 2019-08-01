@@ -1,0 +1,24 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+server:
+  port: 9002
+spring:
+  application:
+    name: gateway-server
+  redis:
+    host: 192.168.1.88
+    port: 7021
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 192.168
+zuul:
+  routes:
+    api-a:
+      path: /a/**
+      serviceId: service-a
+    api-b:
+      path: /b/**
+      serviceId: service-b

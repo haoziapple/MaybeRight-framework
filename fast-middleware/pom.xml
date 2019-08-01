@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fast-framework</artifactId>
+        <groupId>github.haozi</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <description>
+        平台中间件模块，提供业务无关性的中间件服务。例如服务网关、注册中心、配置中心、日志监控中心、数据库事务管理服务等。
+        各中间件模块对外需要交付服务部署包、客户端依赖、部署文档、使用文档。
+        一些客户端依赖可能已经封装在fast-core中，需要说明，版本上和fast-core做到一致发布。
+    </description>
+    <modules>
+        <module>fast-eureka-server</module>
+        <module>fast-gateway</module>
+    </modules>
+
+    <groupId>github.haozi</groupId>
+    <artifactId>fast-middleware</artifactId>
+
+
+</project>
