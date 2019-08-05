@@ -1,7 +1,8 @@
 eureka:
   instance:
     prefer-ip-address: true
-    registry-fetch-interval-seconds: 5
+  client:
+    registry-fetch-interval-seconds: 10
 spring:
   http:
     multipart:

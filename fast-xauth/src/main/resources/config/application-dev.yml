@@ -24,8 +24,8 @@ eureka:
         prefer-ip-address: true
     client:
         service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-
+#            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+             defaultZone: http://localhost:9001/eureka/
 spring:
     profiles:
         active: dev
@@ -52,7 +52,7 @@ spring:
             auto-commit: false
     h2:
         console:
-            enabled: false
+            enabled: true
     jpa:
         database-platform: io.github.jhipster.domain.util.FixedH2Dialect
         database: H2
