@@ -1,0 +1,85 @@
+{
+    "name": "Menu",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "seq",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "clientType",
+            "fieldType": "ClientType",
+            "fieldValues": "PC,APP,WECHAT"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "leaf",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "showFlag",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extmap",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "parent",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "role",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "role",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "template",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "template",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "auth",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "auth",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190805073458",
+    "entityTableName": "menu",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "xauth",
+    "applications": "*",
+    "microserviceName": "xauth"
+}

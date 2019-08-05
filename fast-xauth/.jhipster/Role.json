@@ -1,0 +1,73 @@
+{
+    "name": "Role",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extmap",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleType",
+            "fieldType": "RoleType",
+            "fieldValues": "SYSTEM_ADMIN,ADMIN,USER"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "workspace",
+            "otherEntityRelationshipName": "role",
+            "relationshipName": "workspace",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "site",
+            "otherEntityRelationshipName": "role",
+            "relationshipName": "site",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "auth",
+            "otherEntityRelationshipName": "role",
+            "relationshipName": "auth",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "role",
+            "relationshipName": "menu",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "profile",
+            "otherEntityRelationshipName": "role",
+            "relationshipName": "profile",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190805073457",
+    "entityTableName": "role",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "xauth",
+    "applications": "*",
+    "microserviceName": "xauth"
+}

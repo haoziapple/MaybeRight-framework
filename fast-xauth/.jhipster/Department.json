@@ -1,0 +1,63 @@
+{
+    "name": "Department",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "seq",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "leaf",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extMap",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "workspace",
+            "otherEntityRelationshipName": "department",
+            "relationshipName": "workspace",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "department",
+            "otherEntityRelationshipName": "department",
+            "relationshipName": "parent",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "profile",
+            "otherEntityRelationshipName": "department",
+            "relationshipName": "profile",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190805073454",
+    "entityTableName": "department",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "xauth",
+    "applications": "*",
+    "microserviceName": "xauth"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "Workspace",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "remark",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "extmap",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "workspace",
+            "otherEntityRelationshipName": "workspace",
+            "relationshipName": "parent",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "site",
+            "otherEntityRelationshipName": "workspace",
+            "relationshipName": "site",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "template",
+            "otherEntityRelationshipName": "workspace",
+            "relationshipName": "template",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190805073455",
+    "entityTableName": "workspace",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "xauth",
+    "applications": "*",
+    "microserviceName": "xauth"
+}

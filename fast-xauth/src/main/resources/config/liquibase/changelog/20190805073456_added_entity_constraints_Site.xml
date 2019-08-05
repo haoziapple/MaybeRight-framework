@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Site.
+    -->
+    <changeSet id="20190805073456-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="site_id"
+                                 baseTableName="site_role"
+                                 constraintName="fk_site_role_site_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="site"/>
+        <addForeignKeyConstraint baseColumnNames="role_id"
+                                 baseTableName="site_role"
+                                 constraintName="fk_site_role_role_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="role"/>
+        
+        <addForeignKeyConstraint baseColumnNames="site_id"
+                                 baseTableName="site_template"
+                                 constraintName="fk_site_template_site_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="site"/>
+        <addForeignKeyConstraint baseColumnNames="template_id"
+                                 baseTableName="site_template"
+                                 constraintName="fk_site_template_template_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="template"/>
+        
+    </changeSet>
+</databaseChangeLog>

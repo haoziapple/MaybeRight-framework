@@ -1,12 +1,3 @@
-application {
-  config {
-    baseName xauth
-    applicationType microservice
-    prodDatabaseType mysql
-    buildTool maven
-  }
-}
-
 enum Sex {
 	MALE,FEMALE
 }
@@ -49,9 +40,6 @@ entity Site {
 	extmap String
 }
 entity Role {
-	spaceId Integer
-	siteId Integer
-    clientType ClientType
 	name String
 	remark String
 	extmap String
@@ -61,31 +49,33 @@ entity Menu {
 	name String
 	code String
 	seq Integer
-	state String
+    clientType ClientType
 	url String
 	leaf Boolean
 	showFlag Boolean
+    remark String
 	extmap String
 }
 entity Auth {
 	name String
 	code String
-	desc String
+    seq Integer
+    clientType ClientType
+	remark String
 	extmap String
 }
 entity Template {
-	spaceId Integer
-	siteId Integer
-    clientType ClientType
 	name String
-	desc String
+    clientType ClientType
+	remark String
 	extmap String
 }
 
 relationship ManyToOne {
   Profile{workspace} to Workspace
   Department{workspace} to Workspace
-  
+  Role{workspace} to Workspace
+
   Menu{parent} to Menu
   Department{parent} to Department
   Workspace{parent} to Workspace
@@ -95,6 +85,10 @@ relationship ManyToOne {
 relationship ManyToMany {
   Profile{department} to Department{profile}
   Workspace{site} to Site{workspace}
+  Workspace{template} to Template{workspace}
+  Site{role} to Role{site}
+  Site{template} to Template{site}
+
   Auth{role} to Role{auth}
   Menu{role} to Role{menu}
   Auth{template} to Template{auth}
@@ -107,3 +101,6 @@ dto * with mapstruct
 service * with serviceClass
 filter *
 paginate * with pagination
+
+// 执行命令：
+// jhipster import-jdl usejdl.jdl
