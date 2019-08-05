@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "github.fast.xauth"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "microservice",
+    "baseName": "xauth",
+    "packageName": "github.fast.xauth",
+    "packageFolder": "github/fast/xauth",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YTE3MmE1N2YyZDg5NDRjNGJmNDQwYzVjNjVlZGJlMmY0MmExMDUwNDlmM2NjMDA4YThlZGZiOWY0YzJjZGNjYTk3MWI5ZGYxM2QwZDM0MWVmOTJhNTA2Yjk2MjJmZTY4ODAzNWRjOTEzNzY1MWMwMjc0ZDYxMzMzODE1MGMzOWQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

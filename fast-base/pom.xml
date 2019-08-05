@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <description>
-        最底层依赖，提供诸如BaseController，ActionResult，ErrorCode，BasePojo等基础类，以及一些基础的工具类，例如StringUtils，DateUtils等。
+        最底层依赖，提供诸如ActionResult，ErrorCode，BasePojo等基础类，以及一些基础的工具类，例如StringUtils，DateUtils等。
         使用纯Java编码，完全不引入任何的第三方库，保证依赖的纯净。对外交付Maven依赖
     </description>
 
