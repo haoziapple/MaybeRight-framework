@@ -1,0 +1,53 @@
+{
+    "rootSpace": {
+        "id": 1,
+        "name": "根工作空间",
+        "remark": "系统初始化的根工作空间，请勿删除！"
+    },
+    "templates": [
+        {
+            "id": 1,
+            "name": "权限模板1",
+            "clintType": "PC",
+            "remark": "系统初始化-权限模板1"
+        },
+        {
+            "id": 2,
+            "name": "权限模板2",
+            "clientType": "APP",
+            "remark": "系统初始化-权限模板2"
+        },
+        {
+            "id": 3,
+            "name": "权限模板3",
+            "clientType": "PC",
+            "remark": "系统初始化-权限模板3"
+        }
+    ],
+    "menus": [
+        {
+            "id": 1,
+            "name": "系统设置",
+            "code": "system",
+            "seq": 1,
+            "leaf": false,
+            "showFlag": true
+        },
+        {
+            "id": 2,
+            "name": "人员管理",
+            "code": "user",
+            "seq": 1,
+            "leaf": true,
+            "showFlag": true
+        },
+        {
+            "id": 3,
+            "name": "部门管理",
+            "code": "department",
+            "seq": 2,
+            "leaf": true,
+            "showFlag": true
+        }
+    ]
+}
