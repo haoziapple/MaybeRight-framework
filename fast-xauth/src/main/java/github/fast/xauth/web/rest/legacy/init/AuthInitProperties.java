@@ -1,9 +1,7 @@
 package github.fast.xauth.web.rest.legacy.init;
 
-import github.fast.xauth.domain.Auth;
-import github.fast.xauth.domain.Menu;
-import github.fast.xauth.domain.Template;
-import github.fast.xauth.domain.Workspace;
+import github.fast.xauth.domain.*;
+import github.fast.xauth.service.dto.*;
 
 import java.util.List;
 
@@ -13,43 +11,53 @@ import java.util.List;
  * @date 2019-08-07 9:41
  */
 public class AuthInitProperties {
-    private Workspace rootSpace;
+    private WorkspaceDTO rootSpace;
 
-    private List<Template> templates;
+    private List<SiteDTO> sites;
 
-    private List<Auth> auths;
+    private List<TemplateDTO> templates;
 
-    private List<Menu> menus;
+    private List<AuthDTO> auths;
 
-    public Workspace getRootSpace() {
+    private List<MenuDTO> menus;
+
+    public WorkspaceDTO getRootSpace() {
         return rootSpace;
     }
 
-    public void setRootSpace(Workspace rootSpace) {
+    public void setRootSpace(WorkspaceDTO rootSpace) {
         this.rootSpace = rootSpace;
     }
 
-    public List<Template> getTemplates() {
+    public List<SiteDTO> getSites() {
+        return sites;
+    }
+
+    public void setSites(List<SiteDTO> sites) {
+        this.sites = sites;
+    }
+
+    public List<TemplateDTO> getTemplates() {
         return templates;
     }
 
-    public void setTemplates(List<Template> templates) {
+    public void setTemplates(List<TemplateDTO> templates) {
         this.templates = templates;
     }
 
-    public List<Auth> getAuths() {
+    public List<AuthDTO> getAuths() {
         return auths;
     }
 
-    public void setAuths(List<Auth> auths) {
+    public void setAuths(List<AuthDTO> auths) {
         this.auths = auths;
     }
 
-    public List<Menu> getMenus() {
+    public List<MenuDTO> getMenus() {
         return menus;
     }
 
-    public void setMenus(List<Menu> menus) {
+    public void setMenus(List<MenuDTO> menus) {
         this.menus = menus;
     }
 }

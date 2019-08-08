@@ -104,3 +104,6 @@ paginate * with pagination
 
 // 执行命令：
 // jhipster import-jdl usejdl.jdl
+
+// TODO
+// 1. menu,auth不需要clientType，因为权限模板已经有了clientType属性
